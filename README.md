@@ -35,10 +35,20 @@ Define guest set A and B properties.
 
 ## A/B Testing Use Cases.
 
+The next Use Cases will be used on this POC to evaluate A/B Testing implementation and possible solutions:
+
+The order of the CTAs is different between Variant A & Variant B
+
 ![Screenshot 2024-02-21 at 1 33 28 PM](https://github.com/garcm494/ab_testing_poc/assets/123591150/45cb67ea-4a2a-4fe6-a98e-22812463e4e0)
+
+Theme  should change between Variant A & Variant B
 
 ![Screenshot 2024-02-21 at 1 34 24 PM](https://github.com/garcm494/ab_testing_poc/assets/123591150/f2ad9115-d0c1-4e05-ac6a-fdf896072360)
 
+The structure is different between Variant A & Variant B
+
 ![Screenshot 2024-02-21 at 1 34 51 PM](https://github.com/garcm494/ab_testing_poc/assets/123591150/9868db6b-e0fd-4c28-966c-49de5bcaba47)
+
+The Content is different between Variant A & Variant B
 
 ![Screenshot 2024-02-21 at 1 35 10 PM](https://github.com/garcm494/ab_testing_poc/assets/123591150/79cfd2a2-c66c-487a-8ae8-217cf95983b7)
