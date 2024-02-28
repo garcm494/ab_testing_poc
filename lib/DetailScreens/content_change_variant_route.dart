@@ -1,8 +1,11 @@
 /// Detail route for AB Testing sample.
 import 'package:flutter/material.dart';
+import 'package:ab_testing_poc/Utils/variant_selection_enum.dart';
 
 class ContentChangeVariantRoute extends StatelessWidget {
-  const ContentChangeVariantRoute({super.key});
+  final VariantSelection? selectedSubset;
+
+  const ContentChangeVariantRoute({super.key, this.selectedSubset,});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class ContentChangeVariantRoute extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: getElementsSubSetB(context),
+          children: selectedSubset == VariantSelection.subsetA ? getElementsSubSetA(context) : getElementsSubSetB(context),
         ),
       ),
     );

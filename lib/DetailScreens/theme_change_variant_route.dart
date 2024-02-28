@@ -1,12 +1,18 @@
 /// Detail route for AB Testing sample.
 import 'package:flutter/material.dart';
+import 'package:ab_testing_poc/Utils/variant_selection_enum.dart';
 
 class ThemeChangeVariantRoute extends StatelessWidget {
-  const ThemeChangeVariantRoute({super.key});
+  final VariantSelection? selectedSubset;
+
+  const ThemeChangeVariantRoute({
+    super.key,
+    this.selectedSubset,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return getScaffoldSubsetA(context);
+    return selectedSubset == VariantSelection.subsetA ? getScaffoldSubsetA(context) : getScaffoldSubsetB(context);
   }
 
   Scaffold getScaffoldSubsetA(BuildContext context) {

@@ -1,8 +1,14 @@
 /// Detail route for AB Testing sample.
+import 'package:ab_testing_poc/Utils/variant_selection_enum.dart';
 import 'package:flutter/material.dart';
 
 class SmallVariantRoute extends StatelessWidget {
-  const SmallVariantRoute({super.key});
+  final VariantSelection? selectedSubset;
+
+  const SmallVariantRoute({
+    super.key,
+    this.selectedSubset,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +19,7 @@ class SmallVariantRoute extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: getElementsSubSetA(context),
+          children: selectedSubset == VariantSelection.subsetA ? getElementsSubSetA(context) : getElementsSubSetB(context),
         ),
       ),
     );

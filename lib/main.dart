@@ -3,6 +3,7 @@ import 'DetailScreens/content_change_variant_route.dart';
 import 'DetailScreens/large_structure_variant_route.dart';
 import 'DetailScreens/small_variants_route.dart';
 import 'DetailScreens/theme_change_variant_route.dart';
+import 'Utils/variant_selection_enum.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +24,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-enum VariantSelection { subsetA, subsetB }
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -79,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const SmallVariantRoute()
+                      MaterialPageRoute(builder: (context) => SmallVariantRoute(selectedSubset: _variantSelection ?? VariantSelection.subsetA,)
                       )
                   );
                 },
@@ -90,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ThemeChangeVariantRoute()
+                      MaterialPageRoute(builder: (context) => ThemeChangeVariantRoute(selectedSubset: _variantSelection ?? VariantSelection.subsetA,)
                       )
                   );
                 },
@@ -101,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const LargeStructureVariantRoute()
+                      MaterialPageRoute(builder: (context) => LargeStructureVariantRoute(selectedSubset: _variantSelection ?? VariantSelection.subsetA,)
                       )
                   );
                 },
@@ -112,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ContentChangeVariantRoute()
+                      MaterialPageRoute(builder: (context) => ContentChangeVariantRoute(selectedSubset: _variantSelection ?? VariantSelection.subsetA,)
                       )
                   );
                 },
